@@ -16,8 +16,8 @@ function fetchPuppies() {
       return res.json();
     })
     .then((data) => {
-      console.log(data.data); // debugging
-      displayPuppies(data.data);
+      console.log(data.players); // debugging
+      displayPuppies(data.players);
     })
     .catch((error) => console.error("Error fetching puppies:", error));
 }
