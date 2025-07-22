@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <meta charset="UTF-8" />
+    <title>Puppy Bowl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
   </head>
   <body>
-    <div id="app"></div>
-  </body>
+    <h1>Puppy Bowl Roster</h1>
+    <div class="container">
+      <div class="left-column">
+        <h2>Roster</h2>
+
+        <ul id="roster"></ul>
+        <div id="roster-controls">
+          <button id="refresh-roster">Refresh Roster</button>
+          <button id="clear-selection">Clear Selection</button>
+        </div>
+        
+        <h3 id="roster-title">Invite a puppy</h3>
+  <form id="add-puppy-form">
+  <label>
+    Name:<br />
+    <input type="text" id="name" required />
+  </label><br />
+
+  <label>
+    Breed:<br />
+    <input type="text" id="breed" required />
+  </label><br />
+
+  <label>
+    Status:<br />
+    <select id="status">
+      <option value="bench">bench</option>
+      <option value="ready">ready</option>
+    </select>
+  </label><br />
+
+  <button type="submit">Invite Puppy</button>
+</form>
+      </div>
+
+    </div>
+    <div class="right-column">
+      <h2>Puppy Details</h2>
+      <div id="puppy-details">
+        <p id="no-selection">Please select a puppy to see details.</p>
+      </div>
+       <button type="submit">Remove from roster</button>
+    </div>
+  </div>
+</body>
 </html>
